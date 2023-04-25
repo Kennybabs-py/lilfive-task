@@ -31,7 +31,7 @@
     right: 0;
     top: 0;
     width: 100%;
-    max-width: 1440px;
+    height: 100%;
 
     img {
       width: 100%;
@@ -43,7 +43,7 @@
 
 .artist_name {
   position: absolute;
-  bottom: 0rem;
+  bottom: -1rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -57,5 +57,21 @@
     color: rgba(49, 49, 50, 0.3);
     mix-blend-mode: normal;
     font-family: "Kepler 296";
+  }
+}
+
+.music_player__container {
+  border: 1px solid white;
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  min-height: 300px;
+
+  @media (min-width: 1024px) {
+    left: 3rem;
+    transform: none;
   }
 }

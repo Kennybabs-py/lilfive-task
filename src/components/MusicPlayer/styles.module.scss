@@ -1,0 +1,39 @@
+.music_player {
+  border: 1px solid white;
+  width: 100%;
+  height: inherit;
+}
+
+.new_single__heading {
+  font-family: "Tw Cen MT";
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+
+  h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 70px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.27em;
+  }
+}
+
+.track__title {
+  margin-top: 0.5rem;
+  text-align: center;
+
+  p {
+    font-family: "Ronet DEMO";
+    font-weight: 400;
+    font-size: 144px;
+  }
+}
+
+.display__track {
+  border: 1px solid white;
+}

@@ -1,6 +1,16 @@
 @font-face {
   font-family: "Kepler 296";
-  src: url("../public/fonts/Kepler\ 296\ \(Personal\ use\).otf");
+  src: url("/fonts/Kepler\ 296\ \(Personal\ use\).otf");
+}
+
+@font-face {
+  font-family: "Tw Cen MT";
+  src: url("/fonts/TwCenClassMTStd-Regular.otf");
+}
+
+@font-face {
+  font-family: "Ronet DEMO";
+  src: url("/fonts/Ronet\ DEMO.ttf");
 }
 
 * {

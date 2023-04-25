@@ -2,6 +2,7 @@ import homeStyles from "./home.module.scss";
 import ArtistVectorBg from "../../assets/artist_img_background.png";
 import ArtistImg from "../../assets/artist_image.png";
 import TransparentPlayIcon from "../../assets/transaparent_play_icon.svg";
+import MusicPlayer from "../../components/MusicPlayer";
 
 export default function Home() {
   return (
@@ -22,6 +23,10 @@ export default function Home() {
 
       <div className={homeStyles.artist_name}>
         <h1>LIL5IVE</h1>
+      </div>
+
+      <div className={homeStyles.music_player__container}>
+        <MusicPlayer />
       </div>
     </section>
   );
