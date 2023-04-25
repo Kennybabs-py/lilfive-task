@@ -9,19 +9,48 @@
   gap: 0.5rem;
 
   input[type="range"] {
-    --range-progress: 50%;
+    --range-progress: 0;
+    -webkit-appearance: none;
+    appearance: none;
     position: relative;
-    border: 1px solid green;
-    width: 80%;
-    height: 4px;
+    background: #eeeeee;
+    width: 70%;
+    height: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
 
-    &::before {
-      // position: absolute;
-      top: 0;
-      left: 0;
-      height: 50px;
-      background: #f50;
-      width: var(--range-progress);
-    }
+  /* played progress length - Chrome & safari*/
+  input[type="range"]::before {
+    content: "";
+    height: 2px;
+    background: #4b4b52;
+    width: var(--range-progress);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* slider thumb - chrome and safari */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4b4b52;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* dragging thumb - chrome and safari */
+  input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4b4b52;
   }
 }
