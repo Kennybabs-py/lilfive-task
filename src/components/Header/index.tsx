@@ -1,4 +1,4 @@
-import styles from "./header.module.css";
+import styles from "./header.module.scss";
 import WildLifeLogo from "../../assets/wild_life_logo.svg";
 import SearchIcon from "../../assets/search_icon.svg";
 import Hamburger from "../../assets/hamburger_icon.svg";

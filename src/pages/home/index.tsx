@@ -1,5 +1,6 @@
-import homeStyles from "./home.module.css";
+import homeStyles from "./home.module.scss";
 import ArtistVectorBg from "../../assets/artist_img_background.png";
+import ArtistImg from "../../assets/artist_image.png";
 import TransparentPlayIcon from "../../assets/transaparent_play_icon.svg";
 
 export default function Home() {
@@ -15,8 +16,12 @@ export default function Home() {
         </figure>
 
         <figure className={homeStyles.artist__image}>
-          <img src="" alt="artist_img" />
+          <img src={ArtistImg} alt="artist_img" />
         </figure>
+      </div>
+
+      <div className={homeStyles.artist_name}>
+        <h1>LIL5IVE</h1>
       </div>
     </section>
   );
