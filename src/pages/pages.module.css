@@ -1,0 +1,16 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row;
+  background-color: #000000;
+}
+
+.page__container {
+  width: calc(100vw - var(--sidebar-width));
+  height: 100%;
+  position: relative;
+}

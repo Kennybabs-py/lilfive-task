@@ -1,14 +1,37 @@
-main.main {
+.home {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-flow: row;
-  border: 1px solid black;
+  height: 100%;
+  position: relative;
 }
 
-.page {
-  width: calc(100% - var(--sidebar-width));
+.transparent_play_icon {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.artist_img_container {
+  border: 1px solid white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 1024px;
   height: 100%;
+}
+
+.artist_vector_background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.artitst_vector_background > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
