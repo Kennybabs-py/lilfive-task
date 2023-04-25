@@ -1,18 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 
 import AudioControl from "../AudioControl";
+import AudioProgress from "../AudioProgress";
 
 import sevenYears from "../../assets/7 Years.mp3";
 import styles from "./styles.module.scss";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [trackProgress, setTrackProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  function togglePlayPause() {
-    setIsPlaying((prev) => !prev);
-  }
+  const progressRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -23,6 +23,18 @@ export default function MusicPlayer() {
       }
     }
   }, [isPlaying, audioRef]);
+
+  function togglePlayPause() {
+    setIsPlaying((prev) => !prev);
+  }
+
+  function onLoadedMetadata() {
+    if (audioRef.current && progressRef.current) {
+      const seconds = audioRef.current.duration;
+      setDuration(seconds);
+      progressRef.current.max = String(seconds);
+    }
+  }
 
   return (
     <div className={styles.music_player}>
@@ -35,10 +47,28 @@ export default function MusicPlayer() {
         <p>Seven years</p>
       </div>
 
-      <AudioControl togglePlayPause={togglePlayPause} />
+      <AudioControl
+        togglePlayPause={togglePlayPause}
+        setTrackProgress={setTrackProgress}
+        progressRef={progressRef}
+        audioRef={audioRef}
+        duration={duration}
+        isPlaying={isPlaying}
+      />
+
+      <AudioProgress
+        progressRef={progressRef}
+        audioRef={audioRef}
+        trackProgress={trackProgress}
+        duration={duration}
+      />
 
       <div className={styles.display__track}>
-        <audio src={sevenYears} ref={audioRef} />
+        <audio
+          src={sevenYears}
+          ref={audioRef}
+          onLoadedMetadata={onLoadedMetadata}
+        />
       </div>
     </div>
   );
