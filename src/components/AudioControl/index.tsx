@@ -62,7 +62,6 @@ export default function AudioControl(props: Props) {
       role="button"
       onClick={togglePlayPause}
     >
-      {/* <img src={isPlaying ? MdPause : IoMdPlay} alt="btn" /> */}
       {isPlaying ? <MdPause /> : <IoMdPlay />}
     </div>
   );
