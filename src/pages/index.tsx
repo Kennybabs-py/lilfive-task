@@ -1,4 +1,4 @@
-import styles from "./pages.module.css";
+import styles from "./pages.module.scss";
 import { SideBar, Header } from "../components";
 import Home from "./home";
 

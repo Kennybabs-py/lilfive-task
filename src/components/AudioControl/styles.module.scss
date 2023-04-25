@@ -1,17 +1,22 @@
 .play_pause__btn {
   margin: 0.5rem auto;
-  width: 80px;
+  width: 41px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 3px solid #ffffff;
+  border: 1px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 
-  img {
-    object-fit: cover;
-    display: inline-block;
+  @media (min-width: 1024px) {
+    width: 80px;
+    border: 3px solid #ffffff;
+  }
+
+  svg {
+    fill: #ffffff;
+    display: block;
     height: 50%;
     width: 50%;
   }

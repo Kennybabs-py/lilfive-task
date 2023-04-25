@@ -6,6 +6,9 @@ import {
   useRef,
   useEffect,
 } from "react";
+import { MdPause } from "react-icons/md";
+import { IoMdPlay } from "react-icons/io";
+
 import PlayIcon from "../../assets/play_icon.svg";
 
 import styles from "./styles.module.scss";
@@ -61,7 +64,8 @@ export default function AudioControl(props: Props) {
       role="button"
       onClick={togglePlayPause}
     >
-      <img src={PlayIcon} alt="btn" />
+      {/* <img src={isPlaying ? MdPause : IoMdPlay} alt="btn" /> */}
+      {isPlaying ? <MdPause /> : <IoMdPlay />}
     </div>
   );
 }

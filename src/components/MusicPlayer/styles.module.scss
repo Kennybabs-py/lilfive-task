@@ -1,5 +1,4 @@
 .music_player {
-  border: 1px solid white;
   width: 100%;
   height: inherit;
 }
@@ -13,12 +12,13 @@
   h2 {
     font-weight: 400;
     font-size: 64px;
-    line-height: 70px;
+    font-size: clamp(30px, 3vw, 64px);
+    margin-bottom: 0.3rem;
   }
 
   p {
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(13px, 2.5vw, 18px);
     letter-spacing: 0.27em;
   }
 }
@@ -30,6 +30,6 @@
   p {
     font-family: "Ronet DEMO";
     font-weight: 400;
-    font-size: 144px;
+    font-size: clamp(80px, 10vw, 144px);
   }
 }
