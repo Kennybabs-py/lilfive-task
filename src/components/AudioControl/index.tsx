@@ -9,8 +9,6 @@ import {
 import { MdPause } from "react-icons/md";
 import { IoMdPlay } from "react-icons/io";
 
-import PlayIcon from "../../assets/play_icon.svg";
-
 import styles from "./styles.module.scss";
 
 interface Props {
